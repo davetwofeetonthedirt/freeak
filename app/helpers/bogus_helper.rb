@@ -1,0 +1,2 @@
+module BogusHelper
+end

@@ -1,0 +1,24 @@
+---
+pid: 19275
+config: !ruby/object:Puma::Configuration
+  options:
+    :min_threads: 4
+    :max_threads: 16
+    :quiet: false
+    :debug: false
+    :binds:
+    - unix:///home/davemi/projects/freeak/tmp/sockets/production.socket
+    :workers: 4
+    :daemon: true
+    :worker_directory: "/home/davemi/projects/freeak"
+    :config_file: config/puma.rb
+    :state: "/home/davemi/projects/freeak//tmp/pids/puma-production.state"
+    :mode: :http
+    :worker_timeout: 60
+    :directory: "/home/davemi/projects/freeak"
+    :environment: production
+    :pidfile: "/home/davemi/projects/freeak//tmp/pids/puma-production.pid"
+    :redirect_stdout: "/home/davemi/projects/freeak/log/puma-production.stdout.log"
+    :redirect_stderr: "/home/davemi/projects/freeak/log/puma-production.stderr.log"
+    :redirect_append: false
+    :control_auth_token: 21a29ce7b06f55ee21e2ae19f1a7adf

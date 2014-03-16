@@ -1,0 +1,12 @@
+=== puma startup: 2014-03-15 18:16:14 -0600 ===
+[19278] + Gemfile in context: /home/davemi/projects/freeak/Gemfile
+[19282] + Gemfile in context: /home/davemi/projects/freeak/Gemfile
+[19286] + Gemfile in context: /home/davemi/projects/freeak/Gemfile
+[19288] + Gemfile in context: /home/davemi/projects/freeak/Gemfile
+[19275] - Worker 2 (pid: 19286) booted, phase: 0
+[19275] - Worker 0 (pid: 19278) booted, phase: 0
+[19275] - Worker 1 (pid: 19282) booted, phase: 0
+[19275] - Worker 3 (pid: 19288) booted, phase: 0
+[19275] - Gracefully shutting down workers...
+[19275] * Restarting...
+Available commands: halt, restart, phased-restart, start, stats, status, stop
