@@ -1,6 +1,4 @@
 Freeak::Application.routes.draw do
-  get "receivers/get"
-  get "receivers/update"
   match '/users/create/:uuid', to: 'users#create', via: :post
   match '/users/get/:uuid', to: 'users#get', via: :get
 
@@ -15,6 +13,23 @@ Freeak::Application.routes.draw do
 
   match '/users/services/:uuid/:receiver_id', to: 'services#update', via: :post
   match '/users/services/:uuid/:receiver_id', to: 'services#get', via: :get
+
+  match '/users/watchlist/:uuid/:tms_id', to: 'watchlist#update', via: :post
+  match '/users/watchlist/:uuid', to: 'watchlist#get', via: :get
+  match '/users/watchlist/:uuid/:tms_id', to: 'watchlist#get_by_tms_id', via: :get
+  match '/users/watchlist/:uuid/:tms_id', to: 'watchlist#delete', via: :delete
+
+  match '/users/recent/:uuid/:tms_id', to: 'recent#update', via: :post
+  match '/users/recent/:uuid', to: 'recent#get', via: :get
+  match '/users/recent/:uuid/:tms_id', to: 'recent#get_by_tms_id', via: :get
+  match '/users/recent/:uuid', to: 'recent#delete', via: :delete
+  match '/users/recent/:uuid/:tms_id', to: 'recent#delete_by_tms_id', via: :delete
+
+#Progress
+#GET /users/progress/uuid:
+#      GET /users/progress/uuid:/tmsid:
+#POST /users/progress/uuid:/tmsid:/position:
+#      DELETE /users/progress/uuid:/tmsid:
 
 
 

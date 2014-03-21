@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Device do
-  around :each do
+  after :each do
     $redis.del 'd_BAKDS_DDDDD'
     $redis.del 'd_BAKDS_RRRRR'
     while $redis.spop('d_BAKDS') != nil

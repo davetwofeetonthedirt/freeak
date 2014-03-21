@@ -4,14 +4,14 @@ describe ReceiversController do
 
   describe "GET 'get'" do
     it "returns http success" do
-      get 'get'
+      get 'get', uuid: 'A', receiver_id: 'B'
       response.should be_success
     end
   end
 
   describe "POST 'update'" do
     it "returns http success" do
-      post 'update'
+      post :update, uuid: 'A', receiver_id: 'B'
       response.should be_success
     end
 

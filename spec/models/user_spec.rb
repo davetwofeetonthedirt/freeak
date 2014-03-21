@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe User do
-  around :each do
+  after :each do
     $redis.del 'user_BAKDS'
   end
 

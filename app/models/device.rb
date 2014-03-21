@@ -9,9 +9,11 @@ class Device
     $redis.srem("d_#{uuid}", guid)
   end
 
-  def self.info
+  def self.info(uuid)
     payload = []
     user_devices = $redis.smembers("d_#{uuid}")
+
+    #TODO mget instead
     user_devices.each do |device_guid|
       payload << $redis.get("d_#{uuid}_#{device_guid}")
     end

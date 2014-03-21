@@ -1,25 +1,22 @@
 class DevicesController < ApplicationController
-  #def create
-  #  User.create(params[:uuid], request.body.string)
-  #end
-  #
-  #def get
-  #  User.get(params[:uuid])
-  #end
-  def info
 
+  def info
+    Device.info(params[:uuid])
   end
 
   def type_info
+    #TODO need spec
   end
 
   def authorized
+    Device.authorized(params[:uuid], params[:guid])
   end
 
   def register
-
+    Device.register(params[:uuid], params[:guid], request.body.string)
   end
 
   def unregister
+    Device.unregister(params[:uuid], params[:guid])
   end
 end
