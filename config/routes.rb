@@ -25,18 +25,11 @@ Freeak::Application.routes.draw do
   match '/users/recent/:uuid', to: 'recent#delete', via: :delete
   match '/users/recent/:uuid/:tms_id', to: 'recent#delete_by_tms_id', via: :delete
 
-#Progress
-#GET /users/progress/uuid:
-#      GET /users/progress/uuid:/tmsid:
-#POST /users/progress/uuid:/tmsid:/position:
-#      DELETE /users/progress/uuid:/tmsid:
-
-
+  match '/users/progress/:uuid/:tms_id/:position', to: 'progress#update', via: :post
+  match '/users/progress/:uuid', to: 'progress#get', via: :get
+  match '/users/progress/:uuid/:tms_id', to: 'progress#get_by_tms_id', via: :get
+  match '/users/progress/:uuid/:tms_id', to: 'progress#delete', via: :delete
 
   get 'bogus/index'
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
   root 'bogus#index'
-
 end
