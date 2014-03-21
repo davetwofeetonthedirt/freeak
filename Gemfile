@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+#following are rubinius specific
+#gem 'racc'
+#gem 'rubysl'
+
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
@@ -8,6 +13,16 @@ gem 'rspec'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+
+gem 'redis'
+
+gem 'rspec-rails', '~> 2.14', group: [:development, :test]
+gem 'mocha', group: [:development, :test]
+
+# note that oj doesn't work with rubinius
+gem 'oj'
+gem 'digest-crc'
+
 
 # Use SCSS for stylesheets
 #gem 'sass-rails', '~> 4.0.2'
