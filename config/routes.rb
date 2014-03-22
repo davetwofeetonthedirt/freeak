@@ -1,6 +1,6 @@
 Freeak::Application.routes.draw do
-  match '/users/create/:uuid', to: 'users#create', via: :post
-  match '/users/get/:uuid', to: 'users#get', via: :get
+  match '/users/info/:uuid', to: 'users#create', via: :post
+  match '/users/info/:uuid', to: 'users#get', via: :get
 
   match '/users/device/info/:uuid', to: 'devices#info', via: :get
   match '/users/device/info/:uuid/:guid/:type', to: 'devices#type_info', via: :get

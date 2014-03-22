@@ -32,7 +32,11 @@ GEM
     digest-crc (0.4.0)
     erubis (2.7.0)
     hike (1.2.3)
+    httparty (0.13.0)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.6.9)
+    json (1.8.1)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -42,6 +46,7 @@ GEM
     mocha (1.0.0)
       metaclass (~> 0.0.1)
     multi_json (1.9.0)
+    multi_xml (0.5.5)
     oj (2.6.0)
     polyglot (0.3.4)
     puma (2.8.1)
@@ -104,6 +109,7 @@ PLATFORMS
 
 DEPENDENCIES
   digest-crc
+  httparty
   mocha
   oj
   puma

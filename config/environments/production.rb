@@ -78,4 +78,7 @@ Freeak::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  #REDIS_STORE_SERVER = 'localhost'
+  REDIS_STORE_SERVER = 'localhost'
 end

@@ -23,6 +23,8 @@ gem 'mocha', group: [:development, :test]
 gem 'oj'
 gem 'digest-crc'
 
+gem 'httparty'
+
 
 # Use SCSS for stylesheets
 #gem 'sass-rails', '~> 4.0.2'

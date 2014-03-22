@@ -1,7 +1,7 @@
 class DevicesController < ApplicationController
 
   def info
-    Device.info(params[:uuid])
+    render json: Device.info(params[:uuid])
   end
 
   def type_info
@@ -9,14 +9,14 @@ class DevicesController < ApplicationController
   end
 
   def authorized
-    Device.authorized(params[:uuid], params[:guid])
+    render json: Device.authorized(params[:uuid], params[:guid])
   end
 
   def register
-    Device.register(params[:uuid], params[:guid], request.body.string)
+    render json: Device.register(params[:uuid], params[:guid], request.body.string)
   end
 
   def unregister
-    Device.unregister(params[:uuid], params[:guid])
+    render json: Device.unregister(params[:uuid], params[:guid])
   end
 end
