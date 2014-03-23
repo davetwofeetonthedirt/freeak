@@ -1,4 +1,7 @@
 class Service
+
+  #TODO compress service values
+
   def self.service_guid_from_full_services_json(full_services_json)
     Digest::CRC64.hexdigest(full_services_json.to_s)
   end

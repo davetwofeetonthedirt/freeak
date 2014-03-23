@@ -77,7 +77,7 @@ Freeak::Application.configure do
   config.autoflush_log = false
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
-  config.log_formatter = ::Logger::Formatter.new
+  #config.log_formatter = ::Logger::Formatter.new
 
   #REDIS_STORE_SERVER = 'localhost'
   REDIS_STORE_SERVER = 'localhost'
